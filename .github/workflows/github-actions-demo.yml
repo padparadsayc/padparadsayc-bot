@@ -1,4 +1,4 @@
-name: 'GitHub Actions Send Message Demo Bot'
+name: 'GitHub Actions Send Message Schedule Demo Bot'
 
 on:
   schedule:
