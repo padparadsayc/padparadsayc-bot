@@ -1,7 +1,6 @@
 name: 'GitHub Actions Send Message Schedule Demo Bot'
 
 on:
-  push:
   schedule:
     - cron: '9 * * * *'
 
