@@ -8,8 +8,9 @@ jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Run code Schedule'
+      - name: "hello"
         uses: actions/checkout@main
+      - name: 'Run code Schedule'
         run: bash ./demo.sh
         env:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
