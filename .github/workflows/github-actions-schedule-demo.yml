@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Run code Schedule'
-      - uses: actions/checkout@main
+        uses: actions/checkout@main
         run: bash ./demo.sh
         env:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
