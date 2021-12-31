@@ -1,9 +1,10 @@
-name: 'GitHub Actions Send Message Schedule Demo Bot'
+name: 'Github Push Bot'
 
 on:
-  schedule:
-    - cron: '0 12 * * *'
-
+  push:
+    branches:
+      - main
+    
 jobs:
   bot:
     runs-on: ubuntu-latest
@@ -11,8 +12,8 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
         with: { ref: main }
-      - name: 'Run code Schedule'
-        run: bash ./demo.sh schedule
+      - name: 'Run code push message'
+        run: bash ./demo.sh push
         env:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

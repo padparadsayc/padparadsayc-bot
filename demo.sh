@@ -6,7 +6,16 @@ if [ -f ./.config ]; then
     . ./.config
 fi
 
+case "$1" in
+    "schedule")
+        text="我是每晚定时发送的消息的机器人，现在应该是北京时间晚上 8:00 ，我是否准时了呢？ :)"
+        ;;
+    "push")
+        text="刚 push 了一个新版本呢"
+        ;;
+esac
+
 curl -X POST \
-     -H 'Content-Type: application/json' \
-     -d "{\"chat_id\": \"$TELEGRAM_CHAT_ID\", \"text\": \"This is a schedule test from curl every one hour. $(date)\", \"disable_notification\": true}" \
-     https://api.telegram.org/bot"$TELEGRAM_BOT_TOKEN"/sendMessage
+    -H 'Content-Type: application/json' \
+    -d "{\"chat_id\": \"$TELEGRAM_CHAT_ID\", \"text\": \"${text}\", \"disable_notification\": true}" \
+    https://api.telegram.org/bot"$TELEGRAM_BOT_TOKEN"/sendMessage
