@@ -17,3 +17,11 @@ jobs:
         env:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      - name: install x-cmd && update code
+        run: |
+          eval "$(curl https://get.x-cmd.com)"
+          echo "x-cmd installed"
+      - name: publish x-cmd
+        run: |
+          x ls
+          x proxy
