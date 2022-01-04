@@ -21,4 +21,4 @@ jobs:
         run: |
           eval "$(curl https://get.x-cmd.com)"
           echo "x-cmd installed"
-          x proxy --help
+          x proxy --help | true
