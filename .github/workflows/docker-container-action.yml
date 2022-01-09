@@ -1,0 +1,14 @@
+name: 'Docker Container Action'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+        with: { ref: main }
+      - name: 'Run docker container'
+        run: docker run --rm -it  xcmd/alpine sh -c 'echo "hello world"'
