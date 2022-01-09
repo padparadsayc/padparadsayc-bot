@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v2
         with: { ref: main }
       - name: 'Run docker container'
-        run: docker run --rm -it  xcmd/alpine sh -c 'echo "hello world"'
+        run: docker run --rm -t  xcmd/alpine sh -c 'echo "hello world"'
