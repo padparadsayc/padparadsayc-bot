@@ -1,8 +1,9 @@
 name: 'GitHub Actions Send Message Schedule Demo Bot'
 
 on:
-  schedule:
-    - cron: '0 12 * * *'
+  # schedule:
+  #  - cron: '0 12 * * *'
+  workflow_dispatch:
 
 jobs:
   bot:
