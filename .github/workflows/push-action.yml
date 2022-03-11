@@ -1,25 +1,19 @@
-name: 'Github Push Bot'
+# name: 'Github Push Bot'
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
     
-jobs:
-  bot:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-        with: { ref: main }
-      - name: 'Run code push message'
-        run: bash ./demo.sh push
-        env:
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      - name: install x-cmd && update code
-        run: |
-          eval "$(curl https://get.x-cmd.com)"
-          echo "x-cmd installed"
-          x proxy --help || true
-          x || true
+# jobs:
+#   bot:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Git checkout
+#         uses: actions/checkout@v2
+#         with: { ref: main }
+#       - name: 'Run code push message'
+#         run: bash ./demo.sh push
+#         env:
+#           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+#           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
