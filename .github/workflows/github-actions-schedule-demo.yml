@@ -1,19 +1,19 @@
-name: 'GitHub Actions Send Message Schedule Demo Bot'
+# name: 'GitHub Actions Send Message Schedule Demo Bot'
 
-on:
-  # schedule:
-  #  - cron: '0 12 * * *'
-  workflow_dispatch:
+# on:
+#   # schedule:
+#   #  - cron: '0 12 * * *'
+#   workflow_dispatch:
 
-jobs:
-  bot:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-        with: { ref: main }
-      - name: 'Run code Schedule'
-        run: bash ./demo.sh schedule
-        env:
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+# jobs:
+#   bot:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Git checkout
+#         uses: actions/checkout@v2
+#         with: { ref: main }
+#       - name: 'Run code Schedule'
+#         run: bash ./demo.sh schedule
+#         env:
+#           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+#           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
