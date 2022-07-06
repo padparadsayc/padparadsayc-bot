@@ -17,3 +17,4 @@ ___x_cmd_yanfa_mod_ls_awk_(){
     else if (index(mode, mod) > 0) print mod
 }'
 }
+___x_cmd_yanfa_mod_ls_latest
