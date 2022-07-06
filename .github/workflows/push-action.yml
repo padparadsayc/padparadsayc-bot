@@ -15,4 +15,4 @@ jobs:
       - name: main
         uses: x-cmd/action@main
         with:
-          code: ___x_cmd_httpget_gitx_official modlist || true ; echo "$mirror, $___X_CMD_CODESORUCE_REPO, ${___X_CMD_CODESORUCE_REPO_BRANCH}"
+          code: ___x_cmd_httpget_gitx_official modlist || true ; echo ",, $___X_CMD_MIRROR_LIST, $___X_CMD_CODESORUCE_REPO, ${___X_CMD_CODESORUCE_REPO_BRANCH}"
