@@ -9,10 +9,7 @@ jobs:
   publisher:
     runs-on: ubuntu-latest
     env:
-      ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
-      git_user: agent-zero
-      git_email: 0@x-cmd.com
-      ___X_CMD_CODESORUCE_REPO: nightly
+      ___X_CMD_CODESORUCE_REPO: dev
       CONCURRENCY: 15
     steps:
       - name: main
