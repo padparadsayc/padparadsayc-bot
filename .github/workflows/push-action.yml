@@ -15,4 +15,4 @@ jobs:
       - name: main
         uses: x-cmd/action@main
         with:
-          code: bash ./test.sh
+          code: . ./test.sh
